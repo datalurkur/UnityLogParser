@@ -50,7 +50,7 @@ namespace UnityLogParser
                     string joinedLogLines = string.Join("\n", loglines);
                     string joinedStacktrace = string.Join("\n", stacktrace);
 
-                    bool isErrorOrException = joinedStacktrace.Contains("Error") || stacktrace.Contains("Exception");
+                    bool isErrorOrException = joinedStacktrace.Contains("Error") || joinedStacktrace.Contains("Exception");
                     bool isWarning = joinedStacktrace.Contains("Warning");
 
                     startOfLog = ++i;
